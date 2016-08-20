@@ -39,7 +39,7 @@ header('Access-Control-Allow-Origin: *');
     <meta name="author" content="Magyar András">
 
     <title>Youtube channel list</title>
-	
+
 </head>
 <body>
 
@@ -102,7 +102,7 @@ header('Access-Control-Allow-Origin: *');
 	background-color:#000;
 	transition:all 500ms ease;
 }
-@media (min-width:320px) and (max-width: 480px) { 
+@media (min-width:320px) and (max-width: 480px) {
 	.video-list-thumbs .glyphicon-play-circle{
     font-size: 35px;
     right: 36%;
@@ -127,7 +127,7 @@ header('Access-Control-Allow-Origin: *');
 //You must enable Youtube Data API v3 and get API key on Google Developer Console(https://console.developers.google.com)
 
 $channelId = 'UC0KKWfv47jyBj6sIKNhZNow';
-$maxResults = 50;//每页显示数量 最大50
+$maxResults = 20;//每页显示数量 最大50
 $API_key = 'AIzaSyA2bW64hNAVxVFBDBuVtddHsYRoBPHzD8E';
 
 set_error_handler('videoListDisplayError');
@@ -147,9 +147,9 @@ foreach($video_list->items as $item)
 {
 	    //Embed video
 		if(isset($item->id->videoId)){
-		
-		
-		
+
+
+
 	echo '<li id="'. $item->id->videoId .'" class="col-lg-3 col-sm-6 col-xs-6 youtube-video">
 		<a href="video.php?v='. $item->id->videoId .'" title="'. $item->snippet->title .'">
 			<img src="/thumbnail.php?vid='. $item->id->videoId .'" alt="'. $item->snippet->title .'" class="img-responsive" height="130px" />
@@ -158,7 +158,7 @@ foreach($video_list->items as $item)
 		</a>
 	</li>
 	';
-	
+
 		}
 		//Embed playlist
 		else if(isset($item->id->playlistId))
@@ -183,8 +183,8 @@ function videoListDisplayError()
 
 
 ?>
-	
-	
+
+
 </ul>
 
 
@@ -204,7 +204,7 @@ $(".youtube-video").click(function(e){
     return false;
 	 e.preventDefault();
 	});
-	
+
 </script>
 
 </body>

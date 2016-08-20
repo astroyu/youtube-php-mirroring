@@ -12,7 +12,7 @@
     <meta name="author" content="Magyar András">
     <meta name="keywords" content="<?php echo $keyw_ords;?>">
     <meta name="description" content="<?php echo $descr_iption;?>">
- 
+
     <title><?php echo $pagetitle.'-'. $title;?></title>
 
     <!-- Bootstrap Core CSS -->
@@ -24,7 +24,7 @@
         padding-top: 70px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
-    
+
     .video-list-thumbs{}
 .video-list-thumbs > li{
     margin-bottom:12px
@@ -81,14 +81,14 @@
         margin-top: 5px;
         padding: 0;
     }
- 
+
     #custom-search-form .search-query {
         padding-right: 3px;
         padding-right: 4px \9;
         padding-left: 3px;
         padding-left: 4px \9;
         /* IE7-8 doesn't have border-radius, so don't indent the padding */
- 
+
         margin-bottom: 0;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
@@ -98,7 +98,7 @@
     -o-transition: width  0.2s ease-in-out;
     transition: width  0.2s ease-in-out;
     }
- 
+
     #custom-search-form button {
         border: 0;
         background: none;
@@ -113,19 +113,19 @@
         -moz-border-radius: 3px;
         border-radius: 3px;
     }
- 
+
     .search-query:focus + button {
-        z-index: 3;   
-    }   
+        z-index: 3;
+    }
     .search-query:focus{
         width: 260px;
-    }   
+    }
 
 .video-list-thumbs > li > a:hover .duration{
 	background-color:#000;
 	transition:all 500ms ease;
 }
-@media (min-width:320px) and (max-width: 480px) { 
+@media (min-width:320px) and (max-width: 480px) {
 	.video-list-thumbs .glyphicon-play-circle{
     font-size: 35px;
     right: 36%;
@@ -166,32 +166,21 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
         <div class="col-sm-3 col-md-3 pull-right">
         <form action="search.php" method="get" class="navbar-form" role="search">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="搜Youtube" name="q" id="srch-term">
+            <input type="text" class="form-control" placeholder="Search Youtube" name="q" id="srch-term">
             <div class="input-group-btn">
                 <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
             </div>
         </div>
         </form>
-        </div>  
+        </div>
             </div>
           </div>
-      
+
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
-    
+
