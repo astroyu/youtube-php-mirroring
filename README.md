@@ -1,2 +1,2 @@
-# youtube-php-mirroring
+# yt-php
 Just for FUN!
