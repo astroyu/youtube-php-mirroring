@@ -49,7 +49,7 @@ return $data;
     <meta name="author" content="Magyar András">
 
     <title><?php echo $title;?></title>
-	
+
 </head>
 <body>
 
@@ -112,7 +112,7 @@ return $data;
 	background-color:#000;
 	transition:all 500ms ease;
 }
-@media (min-width:320px) and (max-width: 480px) { 
+@media (min-width:320px) and (max-width: 480px) {
 	.video-list-thumbs .glyphicon-play-circle{
     font-size: 35px;
     right: 36%;
@@ -134,7 +134,7 @@ return $data;
 //You must enable Youtube Data API v3 and get API key on Google Developer Console(https://console.developers.google.com)
 
 $channelId = $home_v;
-$maxResults = 48;//首页视频显示数量，最多50
+$maxResults = 16;//首页视频显示数量，最多50
 $API_key = $youtube_api;
 
 
@@ -146,9 +146,9 @@ foreach($video_list->items as $item)
 {
 	    //Embed video
 		if(isset($item->id->videoId)){
-		
-		
-		
+
+
+
 	echo '<li id="'. $item->id->videoId .'" class="col-lg-3 col-sm-6 col-xs-6 youtube-video">
 		<a href="./video.php?v='. $item->id->videoId .'" target="_blank" title="'. $item->snippet->title .'">
 			<img src="./thumbnail.php?vid='. $item->id->videoId .'" alt="'. $item->snippet->title .'" class="img-responsive" height="130px" />
@@ -157,7 +157,7 @@ foreach($video_list->items as $item)
 		</a>
 	</li>
 	';
-	
+
 		}
 		//Embed playlist
 		else if(isset($item->id->playlistId))
@@ -182,15 +182,8 @@ function videoListDisplayError()
 
 
 ?>
-	
-	
+
+
 </ul>
-
-<a href="http://ytchina.cf" target="_blank" class="btn btn-danger btn-lg">开发者官网</a>
-
-
-
-
-
 </body>
 </html>
