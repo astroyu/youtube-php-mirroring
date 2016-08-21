@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ckplayer>
-<title>{font color="#FFDD00" face="新宋体"}精彩视频推荐{/font}</title>
+<title>{font color="#FFDD00" face="Microsoft YaHei,微软雅黑" size="14"}精彩视频推荐{/font}</title>
 	<!--左上角的标题说明文字，支持html-->
 	<area>600,400,0xFFDD00,20</area>
 	<!--
@@ -29,92 +29,92 @@
 	<relatedlist>
 		<related>
 			<img>temp/1.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=1</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>1：这里调用的文件配置在ckplayer/related.xml里</title>
 		</related>
 		<related>
 			<img>temp/2.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=2</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>2：支持多页调用</title>
 		</related>
 		<related>
 			<img>temp/3.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=3</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>3：文本请保持在二行，不能多于三行，多于三行将不显示</title>
 		</related>
 		<related>
 			<img>temp/4.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=3</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>4：支持多行调用，多页调用</title>
 		</related>
 		<related>
 			<img>temp/5.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=2</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>5：感谢对ckplayer的支持</title>
 		</related>
 		<related>
 			<img>temp/6.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=1</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>6：最多两行,请不要超过二行</title>
 		</related>
 		<related>
 			<img>temp/3.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=1</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>7：这里调用的文件配置在ckplayer/related.xml里</title>
 		</related>
 		<related>
 			<img>temp/5.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=2</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>8：支持多页调用</title>
 		</related>
 		<related>
 			<img>temp/4.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=3</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>9：文本请保持在二行，不能多于三行，多于三行将不显示</title>
 		</related>
 		<related>
 			<img>temp/1.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=3</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>10：支持多行调用，多页调用</title>
 		</related>
 		<related>
 			<img>temp/2.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=2</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>11：感谢对ckplayer的支持</title>
 		</related>
 		<related>
 			<img>temp/6.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=1</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>12：最多两行,请不要超过二行</title>
 		</related>
 		<related>
 			<img>temp/5.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=1</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>13：这里调用的文件配置在ckplayer/related.xml里</title>
 		</related>
 		<related>
 			<img>temp/4.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=2</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>14：支持多页调用</title>
 		</related>
 		<related>
 			<img>temp/6.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=3</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>15：文本请保持在二行，不能多于三行，多于三行将不显示</title>
 		</related>
 		<related>
 			<img>temp/3.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=3</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>16：支持多行调用，多页调用</title>
 		</related>
 		<related>
 			<img>temp/1.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=2</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>17：感谢对ckplayer的支持</title>
 		</related>
 		<related>
 			<img>temp/2.jpg</img>
-			<url>http://www.ckplayer.com/index.php?id=1</url>
+			<url>http://www.ckplayer.com/</url>
 			<title>18：最多两行,请不要超过二行</title>
 		</related>
 	</relatedlist>
