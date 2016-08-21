@@ -10,32 +10,32 @@ $data = curl_exec($ch);
 curl_close($ch);
 return $data;
 }
-function isMobile(){    
-    $useragent=isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';    
-    $useragent_commentsblock=preg_match('|\(.*?\)|',$useragent,$matches)>0?$matches[0]:'';      
-    function CheckSubstrs($substrs,$text){    
-        foreach($substrs as $substr)    
-            if(false!==strpos($text,$substr)){    
-                return true;    
-            }    
-            return false;    
-    }  
-    $mobile_os_list=array('Google Wireless Transcoder','Windows CE','WindowsCE','Symbian','Android','armv6l','armv5','Mobile','CentOS','mowser','AvantGo','Opera Mobi','J2ME/MIDP','Smartphone','Go.Web','Palm','iPAQ');  
-    $mobile_token_list=array('Profile/MIDP','Configuration/CLDC-','160×160','176×220','240×240','240×320','320×240','UP.Browser','UP.Link','SymbianOS','PalmOS','PocketPC','SonyEricsson','Nokia','BlackBerry','Vodafone','BenQ','Novarra-Vision','Iris','NetFront','HTC_','Xda_','SAMSUNG-SGH','Wapaka','DoCoMo','iPhone','iPod');    
-                
-    $found_mobile=CheckSubstrs($mobile_os_list,$useragent_commentsblock) ||    
-              CheckSubstrs($mobile_token_list,$useragent);    
-                
-    if ($found_mobile){    
-        return true;    
-    }else{    
-        return false;    
-    }    
-}  
-if (isMobile()){  
+function isMobile(){
+    $useragent=isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+    $useragent_commentsblock=preg_match('|\(.*?\)|',$useragent,$matches)>0?$matches[0]:'';
+    function CheckSubstrs($substrs,$text){
+        foreach($substrs as $substr)
+            if(false!==strpos($text,$substr)){
+                return true;
+            }
+            return false;
+    }
+    $mobile_os_list=array('Google Wireless Transcoder','Windows CE','WindowsCE','Symbian','Android','armv6l','armv5','Mobile','CentOS','mowser','AvantGo','Opera Mobi','J2ME/MIDP','Smartphone','Go.Web','Palm','iPAQ');
+    $mobile_token_list=array('Profile/MIDP','Configuration/CLDC-','160×160','176×220','240×240','240×320','320×240','UP.Browser','UP.Link','SymbianOS','PalmOS','PocketPC','SonyEricsson','Nokia','BlackBerry','Vodafone','BenQ','Novarra-Vision','Iris','NetFront','HTC_','Xda_','SAMSUNG-SGH','Wapaka','DoCoMo','iPhone','iPod');
+
+    $found_mobile=CheckSubstrs($mobile_os_list,$useragent_commentsblock) ||
+              CheckSubstrs($mobile_token_list,$useragent);
+
+    if ($found_mobile){
+        return true;
+    }else{
+        return false;
+    }
+}
+if (isMobile()){
   //如果手机访问
-header("Location: m_video.php?v=$v"); 
-//确保重定向后，后续代码不会被执行 
+header("Location: m_video.php?v=$v");
+//确保重定向后，后续代码不会被执行
 exit;
 }
 else{
@@ -46,7 +46,7 @@ require 'inc/parser.php';
 $geturl= $ym.$parser.'/index.php?videoid='."$v";
 $w=fcurl($geturl);
 
-$cv=json_decode($w); 
+$cv=json_decode($w);
 
 //print_r($cv);
 
@@ -76,13 +76,13 @@ $pagetitle=$vname;
 //加密传输视频
 // Declare the class
 class GoogleUrlApi {
-	
+
 	// Constructor
 	function GoogleURLAPI($key,$apiURL = 'https://www.googleapis.com/urlshortener/v1/url') {
 		// Keep the API Url
 		$this->apiURL = $apiURL.'?key='.$key;
 	}
-	
+
 	// Shorten a URL
 	function shorten($url) {
 		// Send information along
@@ -90,7 +90,7 @@ class GoogleUrlApi {
 		// Return the result
 		return isset($response['id']) ? $response['id'] : false;
 	}
-	
+
 	// Expand a URL
 	function expand($url) {
 		// Send information along
@@ -98,7 +98,7 @@ class GoogleUrlApi {
 		// Return the result
 		return isset($response['longUrl']) ? $response['longUrl'] : false;
 	}
-	
+
 	// Send information to Google
 	function send($url,$shorten = true) {
 		// Create cURL
@@ -120,7 +120,7 @@ class GoogleUrlApi {
 		curl_close($ch);
 		// Return the result
 		return json_decode($result,true);
-	}		
+	}
 }
 
 
@@ -150,40 +150,20 @@ $video_list1=object_array($video_list);
 <script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <div class="wrapper container">
  <div  class="pull-left" id="a1" style="width:850px">
-     <!--ckplayer配置开始-->
-   <script type="text/javascript" src="/ckplayer/ckplayer.js" charset="utf-8"></script>
-<script type="text/javascript">
-    var flashvars={
-        f:'<?php echo $flvurl;?>',
-        c:0,
-        p:1
-    };
-    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
-    var video=['<?php echo $mp4url;?>->video/mp4'];
-    CKobject.embed('/ckplayer/ckplayer.swf','a1','ckplayer_a1','100%','550px',false,flashvars,video,params);
-</script>
-<!--ckplayer配置结束--> 
- <h1><strong><?php echo $vname;?></strong></h1>    
-    
+    <!--ckplayer配置开始-->
+    <script type="text/javascript" src="/ckplayer/ckplayer.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        var flashvars={
+            f:'<?php echo $flvurl;?>',
+            c:0,
+            p:1
+        };
+        var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+        var video=['<?php echo $mp4url;?>->video/mp4'];
+        CKobject.embed('/ckplayer/ckplayer.swf','a1','ckplayer_a1','100%','550px',false,flashvars,video,params);
+    </script>
+    <!--ckplayer配置结束-->
+<h1><strong><?php echo $vname;?></strong></h1>
 </div>
-<div  class="pull-right" style="width:270px">
- <a href="#" class="list-group-item active">
-  相关视频
-</a>
-<?php
-for($i=0;$i<=20;$i++){
-   echo'<a href="video.php?v='.$video_list1[items][$i][id][videoId] .'"target="_blank" class="list-group-item">'.$video_list1[items][$i][snippet][title].'</a>'; 
-    
-    
-}
-?>   
-    
-    
-    
-</div>
-
-
-
-
 </div>
 <?php require 'footer.php';?>
