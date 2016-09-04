@@ -166,6 +166,7 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="col-sm-2 col-md-2"><a class="btn btn-default" href="inc/stock.htm">&copy</a></div>
         <div class="col-sm-3 col-md-3 pull-right">
         <form action="search.php" method="get" class="navbar-form" role="search">
         <div class="input-group">
